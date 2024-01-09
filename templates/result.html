@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Easy Japanese Converter</title>
+    </head>
+    <body>
+        <li>ID: {{ id }}</li>
+    </body>
+</html>
+
+
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>やさしい日本語変換アプリ</title>
+</head>
+<body>
+    <h1>やさしい日本語変換アプリ</h1>
+
+    <form method="post" action="/easy_japanese/{id}">
+        <label for="OPENAI_API_KEY"></label>
+        OPENAI_API_KEY: <input type="text" name='OPENAI_API_KEY' required>
+
+        <label for="MODEL_ID"></label>
+        MODEL_ID: <input type="text" value='gpt-3.5-turbo-instruct' name="MODEL_ID">
+        
+        <label for="article"></label>
+        article: <input type="text" size="100" name="article">
+
+        <button type="submit">変換</button>
+
+        <h1>変換結果:</h1>
+        <h2>元の文章: </h2>
+        <p id="article">{{ article }}</p>
+        <h2>途中変換結果（単なる文章の要約）:</h2>
+        <p id="summary">{{ summary }}</p>
+        <h2>変換結果:</h2>
+        <p id="easy">{{ easy }}</p>
+    </form>
+
+    <hr>
+
+    
+</body>
+</html>

@@ -1,2 +1,4 @@
 test_langchain_openai.ipynb
 test_langchain_huggingface.ipynb
+main_test.py
+/__pycache__
