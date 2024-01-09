@@ -1,14 +1,3 @@
-<html>
-    <head>
-        <title>Easy Japanese Converter</title>
-    </head>
-    <body>
-        <li>ID: {{ id }}</li>
-    </body>
-</html>
-
-
-
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +6,7 @@
 </head>
 <body>
     <h1>やさしい日本語変換アプリ</h1>
-
+    <h2>ID: {{ id }}</h2>
     <form method="post" action="/easy_japanese/{id}">
         <label for="OPENAI_API_KEY"></label>
         OPENAI_API_KEY: <input type="text" name='OPENAI_API_KEY' required>

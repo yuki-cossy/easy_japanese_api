@@ -9,11 +9,6 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain.schema import StrOutputParser
 
 
-class InputModel(BaseModel):
-    OPENAI_API_KEY: str
-    MODEL_ID: str = 'gpt-3.5-turbo-instruct'
-    article: str
-
 my_app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
