@@ -51,8 +51,6 @@ async def easy_japanese(
     chain = {'summary': summary_chain} | RunnablePassthrough.assign(review=easy_chain)
     result = chain.invoke({'article': article})
 
-    # return {'summary': result['summary'], 'easy': result['review']}
-
     return templates.TemplateResponse(
         request = request,
         name = 'result.html',
